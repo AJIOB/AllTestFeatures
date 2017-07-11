@@ -12,5 +12,13 @@ addons:
 compiler:
   - gcc
 
+  #Setting every project home directory to build
+env:
+  - HOME_FOLDER=lab1
+  - HOME_FOLDER=lab2
+  - HOME_FOLDER=lab3
+  - HOME_FOLDER=lab4
+  - HOME_FOLDER=lab5/linux
+
 script:
-  - cd lab1 && make
+  - cd $(HOME_FOLDER) && make
