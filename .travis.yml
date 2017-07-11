@@ -1,0 +1,16 @@
+language: c
+
+sudo: false
+dist: trusty
+
+addons:
+  apt:
+    packages:
+    - make
+    - g++
+
+compiler:
+  - gcc
+
+script:
+  - cd lab1 && make
