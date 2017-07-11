@@ -21,4 +21,4 @@ env:
   - HOME_FOLDER=lab5/linux
 
 script:
-  - cd $(HOME_FOLDER) && make
+  - cd ${HOME_FOLDER} && make
