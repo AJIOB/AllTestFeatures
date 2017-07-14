@@ -4,3 +4,5 @@ branches:
     tag: beta
   travis_ci_testing:
     tag: travis
+ignore:
+  sha: []
