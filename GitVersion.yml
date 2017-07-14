@@ -1,0 +1,6 @@
+assembly-versioning-scheme: MajorMinorPatch
+branches:
+  master:
+    tag: beta
+  travis_ci_testing:
+    tag: travis
