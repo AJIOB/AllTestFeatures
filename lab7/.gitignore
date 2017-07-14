@@ -283,5 +283,5 @@ __pycache__/
 
 #AJIOB Exclude
 *.stackdump
-transfer.db
-serverPID.db
+[Cc]make*
+!CMakeLists.txt
