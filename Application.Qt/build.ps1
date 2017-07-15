@@ -1,8 +1,17 @@
 param (
     # [string]$isClean = "false"
     [string]$configuration = "Release",
-    [string]$platform = "win32"
+    [string]$platform = "win32",
+    [string]$QTDIR = "C:\Qt\Qt5.7.1\5.7\msvc2015"
  )
+
+function buildOneProject ([string]$projectName) {
+  & msbuild $projectName\$projectName.vcxproj /p:configuration=$configuration /p:platform=$platform /Property:SolutionDir=$pwd\ /Property:QTDIR=$QTDIR
+  if ($LastExitCode -ne 0)
+  {
+    exit $LastExitCode
+  }
+}
 
 # if ($isClean -eq "false")
 # {
@@ -13,10 +22,7 @@ param (
 #   echo "part 2" 
 # }
 
-# & msbuild HashFuncs\HashFuncs.vcxproj /p:configuration=$configuration /p:platform=$platform
-# & msbuild Logger\Logger.vcxproj /p:configuration=$configuration /p:platform=$platform
-& msbuild ClassHierarchy\ClassHierarchy.vcxproj /p:configuration=$configuration /p:platform=$platform
-if ($LastExitCode -ne 0)
-{
-  exit $LastExitCode
-}
+buildOneProject Logger
+buildOneProject HashFuncs
+buildOneProject Configuration
+buildOneProject ClassHierarchy
