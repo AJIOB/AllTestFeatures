@@ -25,4 +25,4 @@ function buildOneProject ([string]$projectName) {
 buildOneProject Logger
 buildOneProject HashFuncs
 buildOneProject Configuration
-buildOneProject ClassHierarchy
+# buildOneProject ClassHierarchy

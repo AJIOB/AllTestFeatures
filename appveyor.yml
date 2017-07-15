@@ -1,7 +1,10 @@
 version: '{build}'
 
 cache:
-  - external -> pre_build.bat
+  - Application.Qt/external -> pre_build.bat
+  - C:\libmongoc
+  - c:\mongo-c-driver
+  - C:\mongo-cxx-driver
 
 before_build:
   - cmd: cd Application.Qt
