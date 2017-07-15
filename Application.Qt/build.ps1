@@ -16,3 +16,7 @@ param (
 # & msbuild HashFuncs\HashFuncs.vcxproj /p:configuration=$configuration /p:platform=$platform
 # & msbuild Logger\Logger.vcxproj /p:configuration=$configuration /p:platform=$platform
 & msbuild ClassHierarchy\ClassHierarchy.vcxproj /p:configuration=$configuration /p:platform=$platform
+if ($LastExitCode -ne 0)
+{
+  exit $LastExitCode
+}
