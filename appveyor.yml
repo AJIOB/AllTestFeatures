@@ -1,7 +1,4 @@
 version: '{build}'
-environment:
-  SolutionDir: $(APPVEYOR_BUILD_FOLDER)\Application.Qt
 build_script:
   - cmd: cd Application.Qt
-  - ps: ./InitQTDIRvariable.ps1 -qtdir "C:\Qt\5.7\msvc2015"
-  - ps: ./build.ps1
+  - ps: ./build.ps1 -QTDIR "C:\Qt\5.7\msvc2015"
