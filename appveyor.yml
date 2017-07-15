@@ -1,4 +1,8 @@
 version: '{build}'
+
+cache:
+  - external -> pre_build.bat
+
 before_build:
   - cmd: cd Application.Qt
   - cmd: ./pre_build.bat

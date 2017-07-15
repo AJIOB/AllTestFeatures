@@ -1,3 +1,7 @@
+IF EXIST external (
+echo Yes 
+) ELSE (
+
 mkdir external
 cd external
 
@@ -19,15 +23,15 @@ msbuild.exe INSTALL.vcxproj
 cd ..
 
 REM # building mongo-cxx-driver
-git clone https://github.com/mongodb/mongo-cxx-driver.git \
-    --branch releases/stable --depth 1
+git clone https://github.com/mongodb/mongo-cxx-driver.git --branch releases/stable --depth 1
 cd mongo-cxx-driver/build
 
-cmake.exe -G "Visual Studio 14 Win64" \
-    -DCMAKE_INSTALL_PREFIX=C:\mongo-cxx-driver \
-    -DCMAKE_PREFIX_PATH=c:\mongo-c-driver \
-    -DBOOST_ROOT=C:\Libraries\boost_1_63_0
+cmake.exe -G "Visual Studio 14 Win64" -DCMAKE_INSTALL_PREFIX=C:\mongo-cxx-driver -DCMAKE_PREFIX_PATH=c:\mongo-c-driver -DBOOST_ROOT=C:\Libraries\boost_1_63_0
 
 REM # going back
 
 cd ../..
+
+cd ..
+
+)
