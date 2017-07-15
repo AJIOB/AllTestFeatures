@@ -4,9 +4,9 @@ cd external
 REM # building mongo-c-driver
 git clone https://github.com/mongodb/mongo-c-driver.git
 cd mongo-c-driver
-git checkout 1.6.2 # for your specific release
+git checkout 1.6.2
 git submodule init
-git submodule update # libbson is a submodule
+git submodule update
 cd src\libbson
 cmake -DCMAKE_INSTALL_PREFIX=C:\libmongoc -G "Visual Studio 14 Win64" .
 msbuild.exe ALL_BUILD.vcxproj
