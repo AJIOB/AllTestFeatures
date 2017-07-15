@@ -1,4 +1,7 @@
 version: '{build}'
-build_script:
+before_build:
   - cmd: cd Application.Qt
+  - cmd: ./pre_build.bat
+
+build_script:
   - ps: ./build.ps1 -QTDIR "C:\Qt\5.7\msvc2015"
