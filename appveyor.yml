@@ -16,4 +16,4 @@ before_build:
   - cmd: cd c++
 
 build_script:
-  - ps: ./build.ps1
+  - ps: ./build.ps1 -platform ${platform} -configuration ${configuration}
