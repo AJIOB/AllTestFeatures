@@ -1,0 +1,7 @@
+version: '{build}'
+
+before_build:
+  - cmd: cd c++
+
+build_script:
+  - ps: ./build.ps1
