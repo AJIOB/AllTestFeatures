@@ -3,6 +3,15 @@ version: '{build}'
 image:
 - Visual Studio 2017
 
+platform:
+  - x86
+  - x64
+  - Any CPU
+
+configuration:
+  - Debug
+  - Release
+
 before_build:
   - cmd: cd c++
 
