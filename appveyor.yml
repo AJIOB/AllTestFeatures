@@ -1,5 +1,8 @@
 version: '{build}'
 
+image:
+- Visual Studio 2017
+
 before_build:
   - cmd: cd c++
 
