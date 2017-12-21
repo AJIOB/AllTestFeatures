@@ -2,6 +2,11 @@ version: '{build}'
 environment:
   SolutionDir: $(APPVEYOR_BUILD_FOLDER)
 build_script:
+<<<<<<< HEAD
   - cmd: cd Application.Qt
   - ps: ./InitQTDIRvariable.ps1 -qtdir "C:\Qt\5.7\msvc2015"
   - ps: ./build.ps1
+=======
+  - ps: Application.Qt/InitQTDIRvariable.ps1 -qtdir "C:\Qt\5.7\msvc2015"
+  - ps: Application.Qt/build.ps1
+>>>>>>> parent of c1dcd8b... build way fix. Part 4
